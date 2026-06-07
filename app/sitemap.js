@@ -1,6 +1,6 @@
 import { calculators, categories } from "@/lib/calculators";
 
-const BASE_URL = "https://calc-all-in-one.vercel.app/";
+const BASE_URL = "https://calc-all-in-one.vercel.app";
 
 export default function sitemap() {
   const now = new Date().toISOString();
