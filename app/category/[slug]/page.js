@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { calculators, categories, getCalculatorsByCategory } from "@/lib/calculators";
 
-const BASE_URL = "https://calc.tools";
+const BASE_URL = "https://calc-all-in-one.vercel.app";
 
 // Map slug → display name (slug is lowercase version of category)
 const slugToCategory = (slug) =>

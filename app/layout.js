@@ -5,10 +5,10 @@ import SearchBar from "@/components/SearchBar";
 import { CalculatorProvider } from "@/context/CalculatorContext";
 import { calculators } from "@/lib/calculators";
 
-const BASE_URL = "https://calc.tools";
+const BASE_URL = "https://calc-all-in-one.vercel.app";
 
 export const metadata = {
-  metadataBase: new URL(BASE_URL),
+  metadataBase: new URL("https://calc-all-in-one.vercel.app"),
   title: {
     default: "Calc — Free Online Calculators",
     template: "%s | Calc",

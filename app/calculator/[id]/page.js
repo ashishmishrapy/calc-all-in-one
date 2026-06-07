@@ -4,7 +4,7 @@ import { calculators, getCalculatorById } from "@/lib/calculators";
 import CalculatorEngine from "@/components/CalculatorEngine";
 import MarkRecent from "@/components/MarkRecent";
 
-const BASE_URL = "https://calc.tools";
+const BASE_URL = "https://calc-all-in-one.vercel.app";
 
 // ── Static generation ────────────────────────────────────────────────────────
 export function generateStaticParams() {
