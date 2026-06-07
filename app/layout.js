@@ -1,5 +1,6 @@
 import "./globals.css";
 import Link from "next/link";
+import Script from "next/script";
 import SearchBar from "@/components/SearchBar";
 import { CalculatorProvider } from "@/context/CalculatorContext";
 import { calculators } from "@/lib/calculators";
@@ -53,6 +54,19 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-55E71C4394"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-55E71C4394');
+          `}
+        </Script>
         <CalculatorProvider>
           <div className="min-h-screen bg-white flex flex-col">
             {/* Skip link */}
