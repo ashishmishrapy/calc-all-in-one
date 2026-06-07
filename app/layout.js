@@ -20,7 +20,7 @@ export const metadata = {
     "age calculator", "free online calculator", "India calculator",
   ],
   verification: {
-    google: "cXr3qOoFCZW6-uDL",
+    google: "cXr3qOoFCZW6-uDLLsu7Y-898iBR5dUxtPp9GWh3KH4",
   },
   robots: { index: true, follow: true },
   openGraph: {
