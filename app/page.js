@@ -5,12 +5,12 @@ import RecentCalculators from "@/components/RecentCalculators";
 export const metadata = {
   title: "Free Online Calculators — Finance, Health, Math & More",
   description:
-    "27 free online calculators for EMI, SIP, BMI, GST, age, tip, unit conversion and more. Fast, minimal, no ads.",
+    "Free online calculators for EMI, SIP, BMI, GST, age, tip, unit conversion and more. Fast, minimal, no ads.",
   alternates: { canonical: "https://calc.tools/" },
   openGraph: {
     title: "Free Online Calculators — Finance, Health, Math & More",
     description:
-      "27 free online calculators for EMI, SIP, BMI, GST, age, tip, unit conversion and more.",
+      "Free online calculators for EMI, SIP, BMI, GST, age, tip, unit conversion and more. Fast, minimal, no ads.",
     url: "https://calc.tools/",
   },
 };
@@ -69,7 +69,12 @@ export default function HomePage() {
                 id={`cat-${cat}`}
                 className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3"
               >
-                {cat}
+                <Link
+                  href={`/category/${cat.toLowerCase()}`}
+                  className="hover:text-gray-700 transition-colors"
+                >
+                  {cat}
+                </Link>
               </h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                 {items.map((c) => (

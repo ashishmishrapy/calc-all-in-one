@@ -2,6 +2,7 @@ import "./globals.css";
 import Link from "next/link";
 import SearchBar from "@/components/SearchBar";
 import { CalculatorProvider } from "@/context/CalculatorContext";
+import { calculators } from "@/lib/calculators";
 
 const BASE_URL = "https://calc.tools";
 
@@ -13,6 +14,11 @@ export const metadata = {
   },
   description:
     "Free online calculators for finance, health, math, unit conversion, and everyday use. Fast, minimal, no ads.",
+  keywords: [
+    "calculator", "EMI calculator", "SIP calculator", "BMI calculator",
+    "GST calculator", "FD calculator", "PPF calculator", "percentage calculator",
+    "age calculator", "free online calculator", "India calculator",
+  ],
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",
@@ -28,6 +34,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@calc_tools",
   },
 };
 
@@ -76,28 +83,35 @@ export default function RootLayout({ children }) {
 
             {/* Footer */}
             <footer className="border-t border-gray-100 py-6" aria-label="Site footer">
-              <div className="max-w-3xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-                <p className="text-xs text-gray-400">27 free calculators · Fast · No ads</p>
-                <nav aria-label="Footer navigation">
-                  <ul className="flex items-center gap-4 list-none p-0 m-0">
-                    <li>
-                      <Link
-                        href="/"
-                        className="text-xs text-gray-400 hover:text-gray-700 transition-colors"
-                      >
-                        Home
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/sitemap.xml"
-                        className="text-xs text-gray-400 hover:text-gray-700 transition-colors"
-                      >
-                        Sitemap
-                      </Link>
-                    </li>
-                  </ul>
-                </nav>
+              <div className="max-w-3xl mx-auto px-4 space-y-3">
+                <div className="flex flex-wrap gap-x-4 gap-y-1">
+                  {["Finance", "Health", "Math", "Converter", "Education", "Everyday"].map((cat) => (
+                    <Link
+                      key={cat}
+                      href={`/category/${cat.toLowerCase()}`}
+                      className="text-xs text-gray-400 hover:text-gray-700 transition-colors"
+                    >
+                      {cat} Calculators
+                    </Link>
+                  ))}
+                </div>
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+                  <p className="text-xs text-gray-400">{calculators.length} free calculators · Fast · No ads</p>
+                  <nav aria-label="Footer navigation">
+                    <ul className="flex items-center gap-4 list-none p-0 m-0">
+                      <li>
+                        <Link href="/" className="text-xs text-gray-400 hover:text-gray-700 transition-colors">
+                          Home
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/sitemap.xml" className="text-xs text-gray-400 hover:text-gray-700 transition-colors">
+                          Sitemap
+                        </Link>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
               </div>
             </footer>
           </div>
