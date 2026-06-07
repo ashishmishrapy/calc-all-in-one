@@ -1,4 +1,4 @@
-import { calculators } from "@/lib/calculators";
+import { calculators, categories } from "@/lib/calculators";
 
 const BASE_URL = "https://calc.tools";
 
@@ -12,6 +12,13 @@ export default function sitemap() {
     priority: 1.0,
   };
 
+  const categoryPages = categories.map((cat) => ({
+    url: `${BASE_URL}/category/${cat.toLowerCase()}`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.9,
+  }));
+
   const calcPages = calculators.map((c) => ({
     url: `${BASE_URL}/calculator/${c.id}`,
     lastModified: now,
@@ -19,5 +26,5 @@ export default function sitemap() {
     priority: 0.8,
   }));
 
-  return [home, ...calcPages];
+  return [home, ...categoryPages, ...calcPages];
 }
