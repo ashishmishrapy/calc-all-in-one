@@ -19,6 +19,9 @@ export const metadata = {
     "GST calculator", "FD calculator", "PPF calculator", "percentage calculator",
     "age calculator", "free online calculator", "India calculator",
   ],
+  verification: {
+    google: "cXr3qOoFCZW6-uDL",
+  },
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",
