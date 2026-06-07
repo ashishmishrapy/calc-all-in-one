@@ -6,12 +6,12 @@ export const metadata = {
   title: "Free Online Calculators — Finance, Health, Math & More",
   description:
     "Free online calculators for EMI, SIP, BMI, GST, age, tip, unit conversion and more. Fast, minimal, no ads.",
-  alternates: { canonical: "https://calc.tools/" },
+  alternates: { canonical: "https://calc-all-in-one.vercel.app/" },
   openGraph: {
     title: "Free Online Calculators — Finance, Health, Math & More",
     description:
       "Free online calculators for EMI, SIP, BMI, GST, age, tip, unit conversion and more. Fast, minimal, no ads.",
-    url: "https://calc.tools/",
+    url: "https://calc-all-in-one.vercel.app/",
   },
 };
 
@@ -20,12 +20,12 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Calc",
-  url: "https://calc.tools",
+  url: "https://calc-all-in-one.vercel.app",
   description:
     "Free online calculators for finance, health, math, unit conversion, and everyday use.",
   potentialAction: {
     "@type": "SearchAction",
-    target: "https://calc.tools/calculator/{search_term_string}",
+    target: "https://calc-all-in-one.vercel.app/calculator/{search_term_string}",
     "query-input": "required name=search_term_string",
   },
 };
@@ -39,7 +39,7 @@ const itemListSchema = {
     "@type": "ListItem",
     position: i + 1,
     name: c.name,
-    url: `https://calc.tools/calculator/${c.id}`,
+    url: `https://calc-all-in-one.vercel.app/calculator/${c.id}`,
   })),
 };
 
